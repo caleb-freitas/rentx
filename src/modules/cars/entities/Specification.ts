@@ -9,8 +9,10 @@ class Specification {
   @Column()
   name: string;
 
-  @CreateDateColumn()
+  @Column()
   description: string;
+
+  @CreateDateColumn()
   created_at: Date;
 
   constructor() {
