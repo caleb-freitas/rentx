@@ -1,5 +1,17 @@
 version: '3.9'
 
+# $ sudo docker-compose down -v --rmi local
+
+# $ sudo lsof -i -P -n | grep 5432
+
+# $ sudo kill -9 <process_id>
+
+# $ sudo docker-compose up -d
+
+# $ yarn typeorm migration:run
+
+# $ sudo docker logs rentx -f
+
 services:
   database:
     image: postgres
