@@ -1,4 +1,5 @@
 import { getRepository, Repository } from 'typeorm';
+import { usersRoutes } from '../../../../routes/users.routes';
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { User } from '../../entities/User';
 import { IUsersRepository } from '../IUsersRepository';
@@ -24,6 +25,11 @@ class UserRepository implements IUsersRepository {
     });
 
     await this.repository.save(user);
+  }
+
+  async findByEmail(email: string): Promise<User> {
+    const user = await this.repository.findOne({ email });
+    return user;
   }
 }
 
