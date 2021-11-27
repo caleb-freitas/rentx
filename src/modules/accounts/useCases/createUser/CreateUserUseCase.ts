@@ -3,6 +3,7 @@ import { hash } from 'bcrypt';
 
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { IUsersRepository } from '../../repositories/IUsersRepository';
+import { AppError } from '../../../../errors/AppError';
 
 @injectable()
 class CreateUserUseCase {
@@ -22,7 +23,7 @@ class CreateUserUseCase {
     );
 
     if (emailAlreadyRegistered) {
-      throw new Error('E-mail already registered');
+      throw new AppError('E-mail already registered');
     }
 
     const passwordHash = await hash(password, 8);
