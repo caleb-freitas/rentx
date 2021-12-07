@@ -1,7 +1,6 @@
-import { AppError } from '../../../../errors/AppError';
-import { ICreateCategoryDTO } from '../../../cars/repositories/ICategoriesRepository';
-import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { UsersRepositoryInMemory } from '../../repositories/inMemory/UsersRepositoryInMemory';
+import { AppError } from '@errors/AppError';
+import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
+import { UsersRepositoryInMemory } from '@modules/accounts/repositories/inMemory/UsersRepositoryInMemory';
 import { CreateUserUseCase } from '../createUser/CreateUserUseCase';
 import { AuthenticateUserUseCase } from './AuthenticateUserUserCase';
 
