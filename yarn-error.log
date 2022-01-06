@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add typeorm migration:create -n CreateSpecificationsCars
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add supertest @types/supertest -D
 
 PATH: 
   /home/caleb/.zinit/polaris/bin:/home/caleb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,17 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: migration:create: Invalid protocol: migration:
-      at Request.module.exports.Request.init (/usr/share/yarn/lib/cli.js:141154:31)
-      at new Request (/usr/share/yarn/lib/cli.js:140827:8)
-      at request (/usr/share/yarn/lib/cli.js:137733:10)
-      at RequestManager.execute (/usr/share/yarn/lib/cli.js:67083:15)
-      at RequestManager.shiftQueue (/usr/share/yarn/lib/cli.js:67121:10)
-      at /usr/share/yarn/lib/cli.js:66790:13
-      at new Promise (<anonymous>)
-      at new F (/usr/share/yarn/lib/cli.js:5301:28)
-      at RequestManager.request (/usr/share/yarn/lib/cli.js:66788:19)
-      at NpmRegistry.<anonymous> (/usr/share/yarn/lib/cli.js:31747:42)
+  Error: EACCES: permission denied, unlink '/home/caleb/Documents/Programming/Projects/RentX/node_modules/@mapbox/node-pre-gyp/node_modules/semver/LICENSE'
 
 npm manifest: 
   {
@@ -41,6 +31,7 @@ npm manifest:
     "dependencies": {
       "bcrypt": "^5.0.1",
       "csv-parse": "^4.16.3",
+      "dayjs": "^1.10.7",
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
       "jsonwebtoken": "^8.5.1",
@@ -1386,6 +1377,11 @@ Lockfile:
       abab "^2.0.3"
       whatwg-mimetype "^2.3.0"
       whatwg-url "^8.0.0"
+  
+  dayjs@^1.10.7:
+    version "1.10.7"
+    resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
+    integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
   
   debug@2.6.9:
     version "2.6.9"
