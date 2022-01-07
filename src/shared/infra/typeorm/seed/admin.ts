@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import createConnection from '../index';
 
 async function create() {
-  const connection = await createConnection('localhost');
+  const connection = await createConnection();
   const id = uuidv4();
   const password = await hash('admin', 8);
 
@@ -12,7 +12,7 @@ async function create() {
     values('${id}', 'admin', 'admin@rentx.com', '${password}', true, 'now()', 'AAA-0000')
     `
   );
-  await connection.close;
+  connection.close;
 }
 
 create().then(() => console.log('Admin user created.'));
