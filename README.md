@@ -21,7 +21,7 @@ $ yarn install
 ### 3. Build, create, start and attach service to containers
 
 It is important that you check the database credentials in the `ormconfig.json` file and, if necessary, change it.
-Also, you need to create a database named `rentx` according to what is in the ormconfig.json configuration file.
+Also, you need to create a database named `rentx` according to what is in the `ormconfig.json `configuration file.
 
 ```bash
 $ docker-compose up -d
@@ -43,7 +43,7 @@ $ docker logs rentx -d
 
 ## Documentation
 
-After running all the above commands successfully, just access `http://localhost:3000/api-docs` to access the documentation of all routes available in the application.
+Após executar com sucesso todos os comandos acima, basta acessar `http://localhost:3000/api-docs` para ver a documentação de todas as rotas disponíveis na aplicação.
 
 ## Technologies
 
