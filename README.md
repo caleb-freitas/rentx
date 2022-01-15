@@ -43,7 +43,7 @@ $ docker logs rentx -d
 
 ## Documentation
 
-Após executar com sucesso todos os comandos acima, basta acessar `http://localhost:3000/api-docs` para ver a documentação de todas as rotas disponíveis na aplicação.
+After successfully executing all the commands above, just access `http://localhost:3000/api-docs` to see the documentation of all routes available in the application.
 
 ## Technologies
 
