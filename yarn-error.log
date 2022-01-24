@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add nodemailer
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add handlebars
 
 PATH: 
   /home/caleb/.zinit/polaris/bin:/home/caleb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/caleb/Documents/Programming/Projects/RentX/node_modules/@mapbox/node-pre-gyp/node_modules/semver/CHANGELOG.md'
+  Error: EACCES: permission denied, unlink '/home/caleb/Documents/Programming/Projects/RentX/node_modules/@mapbox/node-pre-gyp/node_modules/semver/index.js'
 
 npm manifest: 
   {
@@ -29,6 +29,7 @@ npm manifest:
       "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
     },
     "dependencies": {
+      "@types/nodemailer": "^6.4.4",
       "bcrypt": "^5.0.1",
       "csv-parse": "^4.16.3",
       "dayjs": "^1.10.7",
@@ -36,13 +37,14 @@ npm manifest:
       "express-async-errors": "^3.1.1",
       "jsonwebtoken": "^8.5.1",
       "multer": "^1.4.3",
+      "nodemailer": "^6.7.2",
       "pg": "^8.7.1",
       "reflect-metadata": "^0.1.13",
+      "supertest": "^6.1.6",
       "swagger-ui-express": "^4.1.6",
       "ts-node-dev": "^1.1.8",
       "tsyringe": "^4.6.0",
       "typeorm": "^0.2.38",
-      "supertest": "^6.1.6",
       "uuid": "^8.3.2"
     },
     "devDependencies": {
@@ -734,6 +736,13 @@ Lockfile:
     version "16.11.1"
     resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.1.tgz#2e50a649a50fc403433a14f829eface1a3443e97"
     integrity sha512-PYGcJHL9mwl1Ek3PLiYgyEKtwTMmkMw4vbiyz/ps3pfdRYLVv+SN7qHVAImrjdAXxgluDEw6Ph4lyv+m9UpRmA==
+  
+  "@types/nodemailer@^6.4.4":
+    version "6.4.4"
+    resolved "https://registry.yarnpkg.com/@types/nodemailer/-/nodemailer-6.4.4.tgz#c265f7e7a51df587597b3a49a023acaf0c741f4b"
+    integrity sha512-Ksw4t7iliXeYGvIQcSIgWQ5BLuC/mljIEbjf615svhZL10PE9t+ei8O9gDaD3FPCasUJn9KTLwz2JFJyiiyuqw==
+    dependencies:
+      "@types/node" "*"
   
   "@types/prettier@^2.1.5":
     version "2.4.2"
@@ -3033,6 +3042,11 @@ Lockfile:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.1.tgz#3d1d395f204f1f2f29a54358b9fb678765ad2fc5"
     integrity sha512-CqyzN6z7Q6aMeF/ktcMVTzhAHCEpf8SOarwpzpf8pNBY2k5/oM34UHldUwp8VKI7uxct2HxSRdJjBaZeESzcxA==
+  
+  nodemailer@^6.7.2:
+    version "6.7.2"
+    resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.7.2.tgz#44b2ad5f7ed71b7067f7a21c4fedabaec62b85e0"
+    integrity sha512-Dz7zVwlef4k5R71fdmxwR8Q39fiboGbu3xgswkzGwczUfjp873rVxt1O46+Fh0j1ORnAC6L9+heI8uUpO6DT7Q==
   
   nopt@^5.0.0:
     version "5.0.0"
