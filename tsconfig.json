@@ -6,6 +6,7 @@
     "emitDecoratorMetadata": true,
     "rootDir": "./",
     "baseUrl": "./src",
+    "strict": true,
     "paths": {
       "@modules/*": ["modules/*"],
       "@config/*": ["config/*"],
