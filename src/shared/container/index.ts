@@ -14,6 +14,8 @@ import { RentalsRepository } from '@modules/rentals/infra/typeorm/repositories/R
 import '@shared/container/providers';
 import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
 import { UsersTokensRepository } from '@modules/accounts/infra/repositories/UsersTokensRepository';
+import { IStorageProvider } from './providers/StorageProvider/IStorageProvider';
+import { LocalStorageProvider } from './providers/StorageProvider/implementations/LocalStorageProvider';
 
 container.registerSingleton<ICategoriesRepository>(
   'CategoriesRepository',
@@ -43,3 +45,8 @@ container.registerSingleton<IUsersTokensRepository>(
   'UsersTokensRepository',
   UsersTokensRepository
 );
+
+container.registerSingleton<IStorageProvider>(
+  'StorageProvider',
+  LocalStorageProvider
+)
