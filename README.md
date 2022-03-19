@@ -14,7 +14,7 @@ This is an application created to rent all sort of vehicles
 - Run `yarn typeorm migration:run` to create the tables on the database
 - Run `yarn start`
 
-After successfully executing all the commands above, just access `http://localhost:3000/api-docs` to see the documentation of all routes available in the application.
+After successfully executing all the commands above, just access `http://localhost:3000/api-docs` to see the documentation of all routes available in the application
 
 ## Technologies
 
