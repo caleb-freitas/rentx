@@ -1,53 +1,30 @@
 <h1 align="center">RentX</h1>
 
-## Description
+## Project
 
-This is a RESTFul API for renting vehicles.
+This is an application created to rent all sort of vehicles
 
-## How to run
+## How to execute
 
-### 1. Clone the repository
-
-```bash
-$ git clone git@github.com:caleb-freitas/rentx.git
-```
-
-### 2. Install the dependencies
-
-```bash
-$ yarn install
-```
-
-### 3. Build, create, start and attach service to containers
-
-It is important that you check the database credentials in the `ormconfig.json` file and, if necessary, change it.
-Also, you need to create a database named `rentx` according to what is in the `ormconfig.json `configuration file.
-
-```bash
-$ docker-compose up -d
-```
-
-### 4. Run the migrations
-
-```bash
-$ yarn typeorm migration:run
-```
-
-### 5. Check if the server is running
-
-The expected output is `Server running on port 3000...`
-
-```bash
-$ docker logs rentx -d
-```
-
-## Documentation
+- Clone the repository
+- Go to the folder that was cloned `rentx`
+- Add database credentials to `ormconfig-example.json` file and rename it to `ormconfig.json`
+- Run `yarn install` to install the dependencies
+- Run `docker-compose up -d` to build and create containers
+- Run `yarn typeorm migration:run` to create the tables on the database
+- Run `yarn start`
 
 After successfully executing all the commands above, just access `http://localhost:3000/api-docs` to see the documentation of all routes available in the application.
 
 ## Technologies
 
-Coming soon...
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [TypeORM](https://typeorm.io/#/)
+- [Jest](https://jestjs.io/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
 
 ## License
 
